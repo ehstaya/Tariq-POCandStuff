@@ -52,8 +52,8 @@ public class AzureApp
 	*/
 	public static final String storageConnectionString =
 	"DefaultEndpointsProtocol=https;" +
-	"AccountName=<account-name>;" +
-	"AccountKey=<account-key>";
+	"AccountName=tariqblobstore;" +
+	"AccountKey=gR939oyaq69yUmdmU0M2y1zdnmTs49y2ICdLaH0nEoGx4keMy0u+Dqo5aQUTZ54uMs47mF5Mu4I0yxIbBVS/Wg==";
 
 
 	public static void main( String[] args )
@@ -76,10 +76,10 @@ public class AzureApp
 			container.createIfNotExists(BlobContainerPublicAccessType.CONTAINER, new BlobRequestOptions(), new OperationContext());		    
 
 			//Creating a sample file
-			sourceFile = File.createTempFile("sampleFile", ".txt");
+			sourceFile = File.createTempFile("sampleFile_Tariq", ".txt");
 			System.out.println("Creating a sample file at: " + sourceFile.toString());
 			Writer output = new BufferedWriter(new FileWriter(sourceFile));
-			output.write("Hello Azure!");
+			output.write("Hello Azure Tariq!");
 			output.close();
 
 			//Getting a blob reference
